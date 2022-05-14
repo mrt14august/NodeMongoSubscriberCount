@@ -1,0 +1,37 @@
+###
+// 1. get all [no need to provide id]
+GET http://localhost:4001/subscriber/
+
+
+// 2 get one [provide id]
+###
+GET http://localhost:4001/subscriber/627f6060fcfa06725f518613
+
+
+// 3 posting user  // it should be run first to populate the users
+###
+POST http://localhost:4001/subscriber/
+Content-Type: application/json
+
+{
+    "name" : "mritunjay mishra" ,
+    "subscribedToChannel" : "mrt"
+}
+
+
+
+//4 deleting a subscriber
+###
+DELETE  http://localhost:4001/subscriber/627ec121afd75e28c4e30270
+
+
+
+//5 updating an existing subscriber....we do patch here because updating a part of the information
+###
+PATCH  http://localhost:4001/subscriber/627f497acb8bee89d450846c
+Content-Type : application/json
+
+{
+     "name" : "demoUpdating subs succesfully updated 3.0" ,
+    "subscribedToChannel" : "web dev 3.0"
+}
